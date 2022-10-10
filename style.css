@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-image: url('bagaimana-cara-bermain-bola-basket-yang-baik-dan-benar-xGPHWIr6pa.jpg');
+  background-size: cover;
+}
+/* Book */
+.book {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: transform 0.5s;
+}
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+}
+.front,
+.back {
+  background: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid rgb(125, 125, 125);
+}
+.back {
+  z-index: 0;
+}
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.back-content {
+  transform: rotateY(180deg)
+}
+.p{
+  font-size: 10px;
+  font-weight: bold;
+  color: rgb(125, 125, 125);
+}
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+/* Controller Buttons */
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.5s;
+}
+button:focus {
+  outline: none;
+}
+button:hover i {
+  color: #636363;
+}
+i {
+  font-size: 50px;
+  color: gray;
+}
+/* Paper stack order */
+#p1 {
+  z-index: 3;
+}
+#p2 {
+  z-index: 2;
+}
+#p3 {
+  z-index: 1;
+}
+#f1 {
+  background-image: url('f1f52fbdf13e2ed3ab2e75e8fb65a766.jpg');
+  background-size: cover;
+}
+#b3{
+  background-image: url('9871bdd2056df69510aadebff88fb33d.jpg');
+  background-size: cover;
+}
